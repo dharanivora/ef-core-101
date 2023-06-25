@@ -5,9 +5,9 @@ namespace ef_core_101.Data;
 
 public class ContosoPizzaContext : DbContext
 {
-    public ContosoPizzaContext(DbContextOptions<ContosoPizzaContext> options) : base(options)
-    {
-    }
+    //public ContosoPizzaContext(DbContextOptions<ContosoPizzaContext> options) : base(options)
+    //{
+    //}
 
     public DbSet<Customer> Customers { get; set; } = default!;
 
