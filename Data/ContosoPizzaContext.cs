@@ -16,4 +16,9 @@ public class ContosoPizzaContext : DbContext
     public DbSet<OrderDetail> OrderDetails { get; set; } = default!;
 
     public DbSet<Product> Products { get; set; } = default!;
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        optionsBuilder.UseSqlServer("Server=127.0.0.1,1433;Database=ef-core-101;User Id=sa;Password=&hq9%8Tb6X;TrustServerCertificate=true");
+    }
 }
