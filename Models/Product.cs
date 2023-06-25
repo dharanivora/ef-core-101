@@ -10,4 +10,7 @@ public class Product
 
     [Column(TypeName = "decimal(6, 2)")]
     public decimal Price { get; set; }
+
+
+    public override string ToString() => $"{this.Name} is for only {string.Format(this.Price.ToString("C"))}!";
 }
