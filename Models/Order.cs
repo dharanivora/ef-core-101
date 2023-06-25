@@ -8,11 +8,12 @@ public class Order
 
     public DateTime? OrderFulfilled { get; set; }
 
-    // This is the foreign key which joins this table with the "Customer" table. 
+    // This is a navigation property which represents foreign key relationship (which joins this table) with the "Customer" table. 
+    // This is called a "shadow property". We do not need to specify this because EF Core will automatically generate it.
     public int CustomerId { get; set; }
 
-    // This is called a "shadow property". We do not need to specify this because EF Core will automatically generate it.  
-    // public Customer Customer { get; set; } = default!;
+     public Customer Customer { get; set; } = default!;
 
+    // Navigation property
     public ICollection<OrderDetail> OrderDetails { get; set; } = default!;
 }

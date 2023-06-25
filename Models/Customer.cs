@@ -16,5 +16,6 @@ public class Customer
 
     public string? Email { get; set; }
 
+    // Navigation property. 1:M relationship in db.
     public ICollection<Order> Orders { get; set; } = default!;
 }
